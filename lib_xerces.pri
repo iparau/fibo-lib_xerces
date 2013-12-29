@@ -647,7 +647,7 @@ SOURCES += ./srce/xercesc/dom/DOMException.cpp \
 	./srce/xercesc/util/XMLURL.cpp \
 	./srce/xercesc/util/XMLUTF16Transcoder.cpp \
 	./srce/xercesc/util/XMLUTF8Transcoder.cpp \
-	./srce/xercesc/util/XMLWin1252Transcoder.cpp 
+	./srce/xercesc/util/XMLWin1252Transcoder.cpp \
 	./srce/xercesc/util/MsgLoaders/InMemory/InMemMsgLoader.cpp \
 	./srce/xercesc/util/NetAccessors/BinHTTPInputStreamCommon.cpp \
 	./srce/xercesc/util/regx/ASCIIRangeFactory.cpp \

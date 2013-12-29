@@ -35,6 +35,12 @@ win32 {
 }
 
 INCLUDEPATH += $$LIB_XERCES_DIR_INC
+INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/dom
+INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/dom/impl
+INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/sax
+INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/util
+INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/util/MsgLoaders/InMemory
+INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/validators/schema/identity
 
 CONFIG(debug,debug|release) {
 	DEFINES *= _DEBUG
