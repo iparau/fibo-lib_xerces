@@ -1,6 +1,8 @@
 /Debug
 /Release
 /*.user
+/debug
+/release
 
 /*.Debug
 /*.Release
@@ -8,3 +10,6 @@
 /*.filters
 /WinMakefile
 /*.pdb
+/debug/libxerces.prl
+/LinMakefile
+/Makefile

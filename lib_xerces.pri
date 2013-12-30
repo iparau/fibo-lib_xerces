@@ -271,7 +271,7 @@ HEADERS += ./incl/xercesc/dom/DOM.hpp \
 	./incl/xercesc/util/ValueHashTableOf.hpp \
 	./incl/xercesc/util/ValueStackOf.hpp \
 	./incl/xercesc/util/ValueVectorOf.hpp \
-	./incl/xercesc/util/Xerces_autoconf_config.hpp \
+    ./incl/xercesc/util/Xerces_autoconf_config.hpp \
 	./incl/xercesc/util/XercesDefs.hpp \
 	./incl/xercesc/util/XercesVersion.hpp \
 	./incl/xercesc/util/XMemory.hpp \
@@ -451,8 +451,8 @@ HEADERS += ./incl/xercesc/util/NetAccessors/MacOSURLAccessCF/MacOSURLAccessCF.hp
 }
 
 unix {
-HEADERS += ./incl/xercesc/util/FileManagers/PosixFileMgr.hpp \
-	./incl/xercesc/util/MsgLoaders/ICU/ICUMsgLoader.hpp \
+HEADERS += ./incl/xercesc/util/Xerces_autoconf_config_unix.hpp \
+    ./incl/xercesc/util/FileManagers/PosixFileMgr.hpp \
 	./incl/xercesc/util/MutexManagers/PosixMutexMgr.hpp \
 	./incl/xercesc/util/NetAccessors/Socket/SocketNetAccessor.hpp \
 	./incl/xercesc/util/NetAccessors/Socket/UnixHTTPURLInputStream.hpp \
@@ -461,7 +461,8 @@ HEADERS += ./incl/xercesc/util/FileManagers/PosixFileMgr.hpp \
 }
 
 win32 {
-HEADERS += ./incl/xercesc/util/FileManagers/WindowsFileMgr.hpp \
+HEADERS += ./incl/xercesc/util/Xerces_autoconf_config_win32.hpp \
+    ./incl/xercesc/util/FileManagers/WindowsFileMgr.hpp \
 	./incl/xercesc/util/MsgLoaders/Win32/Win32MsgLoader.hpp \
 	./incl/xercesc/util/MutexManagers/WindowsMutexMgr.hpp \
 	./incl/xercesc/util/NetAccessors/WinSock/BinHTTPURLInputStream.hpp \
@@ -775,7 +776,6 @@ SOURCES += ./srce/xercesc/util/NetAccessors/MacOSURLAccessCF/MacOSURLAccessCF.cp
 
 unix {
 SOURCES += ./srce/xercesc/util/FileManagers/PosixFileMgr.cpp \
-	./srce/xercesc/util/MsgLoaders/ICU/ICUMsgLoader.cpp \
 	./srce/xercesc/util/MutexManagers/PosixMutexMgr.cpp \
 	./srce/xercesc/util/NetAccessors/Socket/SocketNetAccessor.cpp \
 	./srce/xercesc/util/NetAccessors/Socket/UnixHTTPURLInputStream.cpp \
