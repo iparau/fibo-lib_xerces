@@ -768,13 +768,13 @@ SOURCES += ./srce/xercesc/dom/DOMException.cpp \
 	
 
 macx {
-HEADERS += ./srce/xercesc/util/NetAccessors/MacOSURLAccessCF/MacOSURLAccessCF.cpp \
+SOURCES += ./srce/xercesc/util/NetAccessors/MacOSURLAccessCF/MacOSURLAccessCF.cpp \
 	./srce/xercesc/util/NetAccessors/MacOSURLAccessCF/URLAccessCFBinInputStream.cpp \
 	./srce/xercesc/util/Transcoders/MacOSUnicodeConverter/MacOSUnicodeConverter.cpp 
 }
 
 unix {
-HEADERS += ./srce/xercesc/util/FileManagers/PosixFileMgr.cpp \
+SOURCES += ./srce/xercesc/util/FileManagers/PosixFileMgr.cpp \
 	./srce/xercesc/util/MsgLoaders/ICU/ICUMsgLoader.cpp \
 	./srce/xercesc/util/MutexManagers/PosixMutexMgr.cpp \
 	./srce/xercesc/util/NetAccessors/Socket/SocketNetAccessor.cpp \
@@ -784,7 +784,7 @@ HEADERS += ./srce/xercesc/util/FileManagers/PosixFileMgr.cpp \
 }
 
 win32 {
-HEADERS += ./srce/xercesc/util/FileManagers/WindowsFileMgr.cpp \
+SOURCES += ./srce/xercesc/util/FileManagers/WindowsFileMgr.cpp \
 	./srce/xercesc/util/MsgLoaders/Win32/Win32MsgLoader.cpp \
 	./srce/xercesc/util/MutexManagers/WindowsMutexMgr.cpp \
 	./srce/xercesc/util/NetAccessors/WinSock/BinHTTPURLInputStream.cpp \

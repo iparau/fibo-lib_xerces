@@ -13,7 +13,6 @@ TARGET = xerces
 DEFINES *= _LIB
 
 win32 {
-	DEFINES *= UNICODE
 	DEFINES *= _CRT_SECURE_NO_DEPRECATE
 	DEFINES *= XERCES_STATIC_LIBRARY
 	DEFINES *= XERCES_BUILDING_LIBRARY
@@ -41,6 +40,11 @@ INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/sax
 INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/util
 INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/util/MsgLoaders/InMemory
 INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/validators/schema/identity
+
+win32 {
+INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/util/MsgLoaders/Win32
+INCLUDEPATH += $$LIB_XERCES_DIR_INC/xercesc/util/Transcoders/Win32
+}
 
 CONFIG(debug,debug|release) {
 	DEFINES *= _DEBUG
