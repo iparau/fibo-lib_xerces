@@ -456,7 +456,9 @@ HEADERS += ./incl/xercesc/util/Xerces_autoconf_config_unix.hpp \
 	./incl/xercesc/util/MutexManagers/PosixMutexMgr.hpp \
 	./incl/xercesc/util/NetAccessors/Socket/SocketNetAccessor.hpp \
 	./incl/xercesc/util/NetAccessors/Socket/UnixHTTPURLInputStream.hpp \
-	./incl/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.hpp 
+    ./incl/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.hpp \
+    ./incl/stricmp.h \
+    ./incl/strnicmp.h
 	
 }
 
@@ -779,7 +781,9 @@ SOURCES += ./srce/xercesc/util/FileManagers/PosixFileMgr.cpp \
 	./srce/xercesc/util/MutexManagers/PosixMutexMgr.cpp \
 	./srce/xercesc/util/NetAccessors/Socket/SocketNetAccessor.cpp \
 	./srce/xercesc/util/NetAccessors/Socket/UnixHTTPURLInputStream.cpp \
-	./srce/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.cpp 
+    ./srce/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.cpp \
+    ./srce/stricmp.c \
+    ./srce/strnicmp.c
 	
 }
 
