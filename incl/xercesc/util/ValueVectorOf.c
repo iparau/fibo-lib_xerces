@@ -44,10 +44,10 @@ ValueVectorOf<TElem>::ValueVectorOf(const XMLSize_t maxElems,
     , fElemList(0)
     , fMemoryManager(manager)
 {
-    fElemList = (TElem*) fMemoryManager->allocate
+    fElemList = static_cast<TElem*> ( fMemoryManager->allocate
     (
         fMaxCount * sizeof(TElem)
-    ); //new TElem[fMaxCount];
+    ) ); //new TElem[fMaxCount];
 
     memset(fElemList, 0, fMaxCount * sizeof(TElem));
 }
@@ -61,10 +61,10 @@ ValueVectorOf<TElem>::ValueVectorOf(const ValueVectorOf<TElem>& toCopy) :
     , fElemList(0)
     , fMemoryManager(toCopy.fMemoryManager)
 {
-    fElemList = (TElem*) fMemoryManager->allocate
+    fElemList = static_cast<TElem*> ( fMemoryManager->allocate
     (
         fMaxCount * sizeof(TElem)
-    ); //new TElem[fMaxCount];
+    ) ); //new TElem[fMaxCount];
 
     memset(fElemList, 0, fMaxCount * sizeof(TElem));
     for (XMLSize_t index = 0; index < fCurCount; index++)
@@ -95,10 +95,10 @@ ValueVectorOf<TElem>::operator=(const ValueVectorOf<TElem>& toAssign)
     if (fMaxCount < toAssign.fCurCount)
     {
         fMemoryManager->deallocate(fElemList); //delete [] fElemList;
-        fElemList = (TElem*) fMemoryManager->allocate
+        fElemList = static_cast<TElem*> ( fMemoryManager->allocate
         (
             toAssign.fMaxCount * sizeof(TElem)
-        ); //new TElem[toAssign.fMaxCount];
+        ) ); //new TElem[toAssign.fMaxCount];
         fMaxCount = toAssign.fMaxCount;
     }
 
@@ -232,10 +232,10 @@ ensureExtraCapacity(const XMLSize_t length)
         if (newMax < minNewMax)
             newMax = minNewMax;
 
-        TElem* newList = (TElem*) fMemoryManager->allocate
+        TElem* newList = static_cast<TElem*> ( fMemoryManager->allocate
         (
             newMax * sizeof(TElem)
-        ); //new TElem[newMax];
+        ) ); //new TElem[newMax];
         for (XMLSize_t index = 0; index < fCurCount; index++)
             newList[index] = fElemList[index];
 
