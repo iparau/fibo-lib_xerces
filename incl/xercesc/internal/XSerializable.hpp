@@ -76,7 +76,7 @@ virtual void                    serialize(XSerializeEngine&); \
 \
 inline friend XSerializeEngine& operator>>(XSerializeEngine& serEng  \
                                          , class_name*&      objPtr) \
-{objPtr = (class_name*) serEng.read(XPROTOTYPE_CLASS(class_name));   \
+{objPtr = static_cast<class_name*>( serEng.read(XPROTOTYPE_CLASS(class_name)) );   \
  return serEng; \
 };
 	

@@ -48,7 +48,7 @@ struct RefHashTableBucketElem
   {
   }
 
-  RefHashTableBucketElem(){};
+  RefHashTableBucketElem(){ fKey=0; fData=0; };
   ~RefHashTableBucketElem(){};
 
   TVal*                           fData;
